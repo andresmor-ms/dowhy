@@ -105,3 +105,5 @@ venv.bak/
 
 # custom values
 docs/source/example_notebooks/causal_model.png
+docs/source/example_notebooks/effect*.png
+docs/source/example_notebooks/obs_data*.png

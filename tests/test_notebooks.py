@@ -39,7 +39,7 @@ def _notebook_run(filepath):
 
        Source of this function: http://www.christianmoscardi.com/blog/2016/01/20/jupyter-testing.html
     """
-    with tempfile.NamedTemporaryFile(suffix=".ipynb") as fout:
+    with tempfile.NamedTemporaryFile(suffix=".ipynb", delete=False) as fout:
         args = ["jupyter", "nbconvert", "--to", "notebook", "--execute",
 #          "--ExecutePreprocessor.timeout=600",
             "-y", "--no-prompt",
