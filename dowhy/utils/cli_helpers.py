@@ -17,7 +17,7 @@ def query_yes_no(question, default=True):
     default_dict = {  # default => prompt default string
         None: "[y/n]",
         True: "[Y/n]",
-        False: "[y/N]"
+        False: "[y/N]",
     }
     default_str = default_dict[default]
     prompt_str = "%s %s " % (question, default_str)

@@ -6,7 +6,9 @@ from dowhy.gcm.graph import get_ordered_predecessors, is_root_node, validate_cau
 from dowhy.gcm.util.general import convert_numpy_array_to_pandas_column
 
 
-def compute_noise_from_data(causal_model: InvertibleStructuralCausalModel, observed_data: pd.DataFrame) -> pd.DataFrame:
+def compute_noise_from_data(
+    causal_model: InvertibleStructuralCausalModel, observed_data: pd.DataFrame
+) -> pd.DataFrame:
     validate_causal_dag(causal_model.graph)
     result = pd.DataFrame()
 
@@ -17,6 +19,10 @@ def compute_noise_from_data(causal_model: InvertibleStructuralCausalModel, obser
             result[node] = convert_numpy_array_to_pandas_column(
                 causal_model.causal_mechanism(node).estimate_noise(
                     observed_data[node].to_numpy(),
-                    observed_data[get_ordered_predecessors(causal_model.graph, node)].to_numpy()))
+                    observed_data[
+                        get_ordered_predecessors(causal_model.graph, node)
+                    ].to_numpy(),
+                )
+            )
 
     return result
