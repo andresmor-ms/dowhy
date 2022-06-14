@@ -1,8 +1,10 @@
-from scipy.stats import t, norm
-import pandas as pd
-import numpy as np
 from collections import defaultdict
-from math import log, exp
+from math import exp, log
+
+import numpy as np
+import pandas as pd
+
+from scipy.stats import norm, t
 
 
 def compute_ci(r=None, nx=None, ny=None, confidence=0.95):

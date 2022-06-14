@@ -1,7 +1,8 @@
 import logging
+import random
+
 import numpy as np
 import scipy.stats as st
-import random
 
 from dowhy.utils.api import parse_state
 

@@ -2,7 +2,7 @@
 future.
 """
 
-from typing import Union, List, Optional
+from typing import List, Optional, Union
 
 import numpy as np
 

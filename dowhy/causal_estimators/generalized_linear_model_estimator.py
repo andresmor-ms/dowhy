@@ -1,5 +1,6 @@
-import statsmodels.api as sm
 import itertools
+
+import statsmodels.api as sm
 
 from dowhy.causal_estimators.regression_estimator import RegressionEstimator
 

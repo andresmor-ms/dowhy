@@ -1,9 +1,12 @@
-from dowhy.causal_refuter import CausalRefuter, CausalRefutation
-from dowhy.causal_estimator import CausalEstimator
-import numpy as np
-import random
-from sklearn.utils import resample
 import logging
+import random
+
+import numpy as np
+
+from sklearn.utils import resample
+
+from dowhy.causal_estimator import CausalEstimator
+from dowhy.causal_refuter import CausalRefutation, CausalRefuter
 
 
 class BootstrapRefuter(CausalRefuter):

@@ -5,17 +5,18 @@ Classes in this module should be considered experimental, meaning there might be
 """
 
 import copy
-from abc import abstractmethod, ABC
-from typing import Optional, List
+
+from abc import ABC, abstractmethod
+from typing import List, Optional
 
 import numpy as np
 
 from dowhy.gcm.graph import (
-    StochasticModel,
     FunctionalCausalModel,
     InvertibleFunctionalCausalModel,
+    StochasticModel,
 )
-from dowhy.gcm.util.general import shape_into_2d, is_categorical
+from dowhy.gcm.util.general import is_categorical, shape_into_2d
 
 
 class PredictionModel:

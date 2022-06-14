@@ -1,10 +1,11 @@
+import networkx as nx
 import numpy as np
 import pandas as pd
-import networkx as nx
-from dowhy.utils.ordered_set import OrderedSet
-from dowhy.utils.graph_operations import find_c_components, induced_graph, find_ancestor
+
 from dowhy.causal_identifier import CausalIdentifier
 from dowhy.utils.api import parse_state
+from dowhy.utils.graph_operations import find_ancestor, find_c_components, induced_graph
+from dowhy.utils.ordered_set import OrderedSet
 
 
 class IDExpression:

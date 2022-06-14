@@ -1,6 +1,8 @@
 import pandas as pd
-from dowhy.causal_model import CausalModel
+
 import dowhy.do_samplers as do_samplers
+
+from dowhy.causal_model import CausalModel
 from dowhy.utils.api import parse_state
 
 

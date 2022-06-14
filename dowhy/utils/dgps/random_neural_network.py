@@ -1,7 +1,9 @@
-from dowhy.utils.dgp import DataGeneratingProcess
-from sklearn.neural_network import MLPRegressor
 import numpy as np
 import pandas as pd
+
+from sklearn.neural_network import MLPRegressor
+
+from dowhy.utils.dgp import DataGeneratingProcess
 
 
 class RandomNeuralNetwork(DataGeneratingProcess):

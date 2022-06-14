@@ -2,13 +2,14 @@
 future.
 """
 
-from typing import Optional, List, Callable
+from typing import Callable, List, Optional
 
 import numpy as np
+
 from sklearn.kernel_approximation import Nystroem
 from sklearn.metrics import euclidean_distances
 
-from dowhy.gcm.util.general import shape_into_2d, is_categorical
+from dowhy.gcm.util.general import is_categorical, shape_into_2d
 
 
 def apply_rbf_kernel(X: np.ndarray, precision: Optional[float] = None) -> np.ndarray:

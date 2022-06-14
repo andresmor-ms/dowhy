@@ -1,62 +1,65 @@
 import warnings
+
 from enum import Enum, auto
 from functools import partial
-from typing import Union, List, Callable, Optional
+from typing import Callable, List, Optional, Union
 
 import numpy as np
 import pandas as pd
+
 from joblib import Parallel, delayed
 from sklearn import metrics
 from sklearn.exceptions import ConvergenceWarning
-from sklearn.linear_model import LogisticRegression, LinearRegression
-from sklearn.model_selection import train_test_split, KFold
+from sklearn.linear_model import LinearRegression, LogisticRegression
+from sklearn.model_selection import KFold, train_test_split
 from sklearn.preprocessing import MultiLabelBinarizer
 
 from dowhy.gcm.cms import ProbabilisticCausalModel
 from dowhy.gcm.fcms import (
-    ClassificationModel,
-    PredictionModel,
-    ClassifierFCM,
     AdditiveNoiseModel,
+    ClassificationModel,
+    ClassifierFCM,
+    PredictionModel,
 )
 from dowhy.gcm.graph import (
-    is_root_node,
-    get_ordered_predecessors,
-    validate_causal_model_assignment,
     CAUSAL_MECHANISM,
+    get_ordered_predecessors,
+    is_root_node,
+    validate_causal_model_assignment,
 )
 from dowhy.gcm.ml import (
-    create_logistic_regression_classifier,
-    create_hist_gradient_boost_classifier,
-    create_linear_regressor,
-    create_hist_gradient_boost_regressor,
-    create_ridge_regressor,
-    create_lasso_regressor,
     create_elastic_net_regressor,
-    create_support_vector_regressor,
+    create_hist_gradient_boost_classifier,
+    create_hist_gradient_boost_regressor,
+    create_lasso_regressor,
+    create_linear_regressor,
+    create_logistic_regression_classifier,
     create_random_forest_regressor,
+    create_ridge_regressor,
+    create_support_vector_regressor,
 )
 from dowhy.gcm.ml.classification import (
+    create_ada_boost_classifier,
     create_extra_trees_classifier,
+    create_gaussian_nb_classifier,
+    create_knn_classifier,
     create_random_forest_classifier,
     create_support_vector_classifier,
-    create_knn_classifier,
-    create_gaussian_nb_classifier,
-    create_ada_boost_classifier,
 )
 from dowhy.gcm.ml.regression import (
+    create_ada_boost_regressor,
     create_extra_trees_regressor,
     create_knn_regressor,
-    create_ada_boost_regressor,
 )
 from dowhy.gcm.stochastic_models import EmpiricalDistribution
 from dowhy.gcm.util.general import (
-    is_categorical,
-    shape_into_2d,
-    fit_one_hot_encoders,
     apply_one_hot_encoding,
+    fit_one_hot_encoders,
+    is_categorical,
     set_random_seed,
+    shape_into_2d,
 )
+
 
 _LIST_OF_POTENTIAL_CLASSIFIERS = [
     partial(create_logistic_regression_classifier, max_iter=1000),

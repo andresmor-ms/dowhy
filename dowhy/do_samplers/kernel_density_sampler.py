@@ -1,11 +1,13 @@
-from dowhy.do_sampler import DoSampler
-from statsmodels.nonparametric.kernel_density import (
-    KDEMultivariateConditional,
-    KDEMultivariate,
-    EstimatorSettings,
-)
 import numpy as np
-from scipy.interpolate import interp1d, LinearNDInterpolator
+
+from scipy.interpolate import LinearNDInterpolator, interp1d
+from statsmodels.nonparametric.kernel_density import (
+    EstimatorSettings,
+    KDEMultivariate,
+    KDEMultivariateConditional,
+)
+
+from dowhy.do_sampler import DoSampler
 
 
 class KernelDensitySampler(DoSampler):

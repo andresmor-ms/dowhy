@@ -1,11 +1,10 @@
 import numpy as np
 import sympy as sp
 import sympy.stats as spstats
+
 from statsmodels.sandbox.regression.gmm import IV2SLS
 
-from dowhy.causal_estimator import CausalEstimate
-from dowhy.causal_estimator import CausalEstimator
-from dowhy.causal_estimator import RealizedEstimand
+from dowhy.causal_estimator import CausalEstimate, CausalEstimator, RealizedEstimand
 from dowhy.utils.api import parse_state
 
 

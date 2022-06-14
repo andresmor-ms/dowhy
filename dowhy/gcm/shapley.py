@@ -5,17 +5,20 @@ the future.
 """
 
 import itertools
+
 from enum import Enum
-from typing import Callable, Union, Tuple, List, Dict, Set, Optional
+from typing import Callable, Dict, List, Optional, Set, Tuple, Union
 
 import numpy as np
 import scipy
+
 from joblib import Parallel, delayed
 from scipy.special import comb
 from sklearn.linear_model import LinearRegression
 from tqdm import tqdm
 
 import dowhy.gcm.config as config
+
 from dowhy.gcm.constant import EPS
 from dowhy.gcm.util.general import set_random_seed
 

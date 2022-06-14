@@ -1,12 +1,11 @@
 import copy
+import logging
 
 import numpy as np
 import pandas as pd
-import logging
 
-from dowhy.causal_refuter import CausalRefutation
-from dowhy.causal_refuter import CausalRefuter
-from dowhy.causal_estimator import CausalEstimator, CausalEstimate
+from dowhy.causal_estimator import CausalEstimate, CausalEstimator
+from dowhy.causal_refuter import CausalRefutation, CausalRefuter
 from dowhy.utils.api import parse_state
 
 

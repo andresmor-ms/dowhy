@@ -1,5 +1,6 @@
-from sklearn import linear_model
 import pandas as pd
+
+from sklearn import linear_model
 
 from dowhy.causal_estimator import CausalEstimate
 from dowhy.causal_estimators.propensity_score_estimator import PropensityScoreEstimator

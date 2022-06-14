@@ -1,10 +1,12 @@
 import inspect
+
+from importlib import import_module
+
+import causalml
 import numpy as np
 import pandas as pd
 
 from dowhy.causal_estimator import CausalEstimate, CausalEstimator
-from importlib import import_module
-import causalml
 
 
 class Causalml(CausalEstimator):

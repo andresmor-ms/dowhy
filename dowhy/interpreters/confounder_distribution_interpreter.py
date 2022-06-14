@@ -1,10 +1,10 @@
 import numpy as np
 
-from dowhy.interpreters.visual_interpreter import VisualInterpreter
+from dowhy.causal_estimator import CausalEstimate
 from dowhy.causal_estimators.propensity_score_weighting_estimator import (
     PropensityScoreWeightingEstimator,
 )
-from dowhy.causal_estimator import CausalEstimate
+from dowhy.interpreters.visual_interpreter import VisualInterpreter
 
 
 class ConfounderDistributionInterpreter(VisualInterpreter):

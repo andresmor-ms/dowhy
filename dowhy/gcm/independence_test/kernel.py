@@ -2,16 +2,18 @@
 future.
 """
 
-from typing import Callable, List, Union, Optional, Tuple
+from typing import Callable, List, Optional, Tuple, Union
 
 import numpy as np
 import scipy
+
 from joblib import Parallel, delayed
-from numpy.linalg import pinv, svd, LinAlgError
+from numpy.linalg import LinAlgError, pinv, svd
 from scipy.stats import gamma
 from sklearn.preprocessing import scale
 
 import dowhy.gcm.config as config
+
 from dowhy.gcm.constant import EPS
 from dowhy.gcm.independence_test.kernel_operation import (
     apply_rbf_kernel,
@@ -19,10 +21,10 @@ from dowhy.gcm.independence_test.kernel_operation import (
 )
 from dowhy.gcm.stats import quantile_based_fwer
 from dowhy.gcm.util.general import (
-    set_random_seed,
-    shape_into_2d,
     apply_one_hot_encoding,
     fit_one_hot_encoders,
+    set_random_seed,
+    shape_into_2d,
 )
 
 

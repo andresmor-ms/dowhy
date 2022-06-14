@@ -3,18 +3,22 @@
 """
 import logging
 
-from sympy import init_printing
 from itertools import combinations
-import dowhy.graph_learners as graph_learners
+
+from sympy import init_printing
+
 import dowhy.causal_estimators as causal_estimators
 import dowhy.causal_refuters as causal_refuters
+import dowhy.graph_learners as graph_learners
 import dowhy.utils.cli_helpers as cli
+
 from dowhy.causal_estimator import CausalEstimate
 from dowhy.causal_graph import CausalGraph
 from dowhy.causal_identifier import CausalIdentifier
 from dowhy.causal_identifiers.id_identifier import IDIdentifier
-from dowhy.utils.api import parse_state
 from dowhy.causal_refuters.graph_refuter import GraphRefuter
+from dowhy.utils.api import parse_state
+
 
 init_printing()  # To display symbolic math symbols
 

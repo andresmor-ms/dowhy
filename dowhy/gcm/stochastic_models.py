@@ -4,11 +4,13 @@ Classes in this module should be considered experimental, meaning there might be
 """
 
 import warnings
-from typing import Union, Tuple, Dict, Optional
+
+from typing import Dict, Optional, Tuple, Union
 
 import numpy as np
 import scipy
-from scipy.stats import rv_continuous, rv_discrete, norm
+
+from scipy.stats import norm, rv_continuous, rv_discrete
 from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
 from sklearn.mixture import BayesianGaussianMixture
@@ -16,6 +18,7 @@ from sklearn.mixture import BayesianGaussianMixture
 from dowhy.gcm.divergence import estimate_kl_divergence_continuous
 from dowhy.gcm.graph import StochasticModel
 from dowhy.gcm.util.general import shape_into_2d
+
 
 _CONTINUOUS_DISTRIBUTIONS = [
     scipy.stats.norm,

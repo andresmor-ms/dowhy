@@ -6,33 +6,35 @@ from typing import Any
 
 import numpy as np
 import sklearn
+
 from packaging import version
+
 
 if version.parse(sklearn.__version__) < version.parse("1.0"):
     from sklearn.experimental import enable_hist_gradient_boosting  # noqa
 
 from sklearn.ensemble import (
-    RandomForestRegressor,
-    HistGradientBoostingRegressor,
-    ExtraTreesRegressor,
     AdaBoostRegressor,
+    ExtraTreesRegressor,
+    HistGradientBoostingRegressor,
+    RandomForestRegressor,
 )
 from sklearn.gaussian_process import GaussianProcessRegressor
 from sklearn.linear_model import (
-    LinearRegression,
-    RidgeCV,
+    ElasticNetCV,
     LassoCV,
     LassoLarsIC,
-    ElasticNetCV,
+    LinearRegression,
+    RidgeCV,
 )
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.svm import SVR
 
 from dowhy.gcm.fcms import InvertibleFunction, PredictionModel
 from dowhy.gcm.util.general import (
-    shape_into_2d,
-    fit_one_hot_encoders,
     apply_one_hot_encoding,
+    fit_one_hot_encoders,
+    shape_into_2d,
 )
 
 

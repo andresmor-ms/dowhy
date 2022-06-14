@@ -1,13 +1,14 @@
+import copy
+import itertools
+
 import numpy as np
 import pandas as pd
-import itertools
-import copy
 
-from dowhy.causal_estimator import CausalEstimator, CausalEstimate
-from dowhy.causal_identifier import CausalIdentifier
+from dowhy.causal_estimator import CausalEstimate, CausalEstimator
 from dowhy.causal_estimators.linear_regression_estimator import (
     LinearRegressionEstimator,
 )
+from dowhy.causal_identifier import CausalIdentifier
 from dowhy.utils.api import parse_state
 
 

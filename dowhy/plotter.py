@@ -1,5 +1,7 @@
-import matplotlib.pyplot as plt
 from datetime import datetime
+
+import matplotlib.pyplot as plt
+
 
 SMALL_SIZE = 8
 MEDIUM_SIZE = 26

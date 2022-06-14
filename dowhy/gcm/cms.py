@@ -3,15 +3,15 @@
 Classes in this module should be considered experimental, meaning there might be breaking API changes in the future.
 """
 
-from typing import Optional, Any, Union
+from typing import Any, Optional, Union
 
 from dowhy.gcm.graph import (
-    DirectedGraph,
-    StochasticModel,
-    ConditionalStochasticModel,
-    FunctionalCausalModel,
     CAUSAL_MECHANISM,
+    ConditionalStochasticModel,
+    DirectedGraph,
+    FunctionalCausalModel,
     InvertibleFunctionalCausalModel,
+    StochasticModel,
 )
 
 

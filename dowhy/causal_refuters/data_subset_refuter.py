@@ -1,7 +1,9 @@
-from dowhy.causal_refuter import CausalRefuter, CausalRefutation
-from dowhy.causal_estimator import CausalEstimator
-import numpy as np
 import logging
+
+import numpy as np
+
+from dowhy.causal_estimator import CausalEstimator
+from dowhy.causal_refuter import CausalRefutation, CausalRefuter
 
 
 class DataSubsetRefuter(CausalRefuter):

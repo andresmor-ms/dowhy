@@ -3,10 +3,12 @@ future.
 """
 
 import random
-from typing import Union, List, Dict, Any
+
+from typing import Any, Dict, List, Union
 
 import numpy as np
 import pandas as pd
+
 from scipy.optimize import minimize
 from sklearn.preprocessing import OneHotEncoder
 

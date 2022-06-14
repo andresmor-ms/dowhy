@@ -1,7 +1,8 @@
-from dowhy.do_sampler import DoSampler
+import networkx as nx
 import numpy as np
 import pymc3 as pm
-import networkx as nx
+
+from dowhy.do_sampler import DoSampler
 
 
 class McmcSampler(DoSampler):

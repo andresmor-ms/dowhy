@@ -7,16 +7,17 @@ from typing import Any
 
 import networkx as nx
 import pandas as pd
+
 from tqdm import tqdm
 
 from dowhy.gcm import config
 from dowhy.gcm.cms import ProbabilisticCausalModel
 from dowhy.gcm.graph import (
+    PARENTS_DURING_FIT,
     get_ordered_predecessors,
     is_root_node,
-    PARENTS_DURING_FIT,
-    validate_causal_model_assignment,
     validate_causal_dag,
+    validate_causal_model_assignment,
 )
 from dowhy.gcm.util.general import (
     column_stack_selected_numpy_arrays,

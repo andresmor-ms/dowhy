@@ -1,9 +1,10 @@
-import numpy as np
 import networkx as nx
+import numpy as np
 
-from . import get_library_class_object
 from dowhy.graph_learners import GraphLearner
 from dowhy.utils.graph_operations import *
+
+from . import get_library_class_object
 
 
 class LINGAM(GraphLearner):

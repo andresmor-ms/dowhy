@@ -2,11 +2,12 @@
 future.
 """
 import numpy as np
+
 from scipy.stats import entropy
 from sklearn.neighbors import NearestNeighbors
 
 from dowhy.gcm.constant import EPS
-from dowhy.gcm.util.general import shape_into_2d, is_categorical
+from dowhy.gcm.util.general import is_categorical, shape_into_2d
 
 
 def auto_estimate_kl_divergence(X: np.ndarray, Y: np.ndarray) -> float:

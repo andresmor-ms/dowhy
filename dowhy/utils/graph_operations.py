@@ -1,11 +1,15 @@
-import numpy as np
-from queue import LifoQueue
-from dowhy.utils.ordered_set import OrderedSet
 import re
-import networkx as nx
+
 from collections import deque
+from queue import LifoQueue
+
+import networkx as nx
+import numpy as np
+
 from networkx.algorithms.dag import is_directed_acyclic_graph
 from networkx.algorithms.shortest_paths.generic import shortest_path
+
+from dowhy.utils.ordered_set import OrderedSet
 
 
 def adjacency_matrix_to_adjacency_list(adjacency_matrix, labels=None):

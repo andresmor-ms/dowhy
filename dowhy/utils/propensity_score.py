@@ -1,13 +1,16 @@
-from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import GradientBoostingClassifier
-from statsmodels.nonparametric.kernel_density import (
-    KDEMultivariateConditional,
-    EstimatorSettings,
-)
-from sklearn.preprocessing import LabelEncoder
-from pandas import get_dummies
-import numpy as np
 import logging
+
+import numpy as np
+
+from pandas import get_dummies
+from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.preprocessing import LabelEncoder
+from statsmodels.nonparametric.kernel_density import (
+    EstimatorSettings,
+    KDEMultivariateConditional,
+)
+
 import dowhy.utils.api as api
 
 

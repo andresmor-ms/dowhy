@@ -1,13 +1,13 @@
 import inspect
+
+from importlib import import_module
+
+import econml
 import numpy as np
 import pandas as pd
 
-from dowhy.causal_estimator import CausalEstimate
-from dowhy.causal_estimator import CausalEstimator
+from dowhy.causal_estimator import CausalEstimate, CausalEstimator
 from dowhy.utils.api import parse_state
-
-from importlib import import_module
-import econml
 
 
 class Econml(CausalEstimator):

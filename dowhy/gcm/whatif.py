@@ -3,7 +3,7 @@
 Functions in this module should be considered experimental, meaning there might be breaking API changes in the future.
 """
 
-from typing import Any, Dict, Callable, Iterable, List, Union, Optional
+from typing import Any, Callable, Dict, Iterable, List, Optional, Union
 
 import networkx as nx
 import numpy as np
@@ -11,15 +11,15 @@ import pandas as pd
 
 from dowhy.gcm._noise import compute_noise_from_data
 from dowhy.gcm.cms import (
-    ProbabilisticCausalModel,
     InvertibleStructuralCausalModel,
+    ProbabilisticCausalModel,
     StructuralCausalModel,
 )
 from dowhy.gcm.fitting_sampling import draw_samples
 from dowhy.gcm.graph import (
+    DirectedGraph,
     get_ordered_predecessors,
     is_root_node,
-    DirectedGraph,
     validate_causal_dag,
     validate_node_in_graph,
 )

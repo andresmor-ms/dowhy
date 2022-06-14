@@ -4,13 +4,15 @@ Classes and functions in this module should be considered experimental, meaning 
 the future.
 """
 
-from abc import abstractmethod, ABC
+from abc import ABC, abstractmethod
 from typing import Any, List
 
 import networkx as nx
 import numpy as np
+
 from networkx.algorithms.dag import has_cycle
 from typing_extensions import Protocol
+
 
 # This constant is used as key when storing/accessing models as causal mechanisms in graph node attributes
 CAUSAL_MECHANISM = "causal_mechanism"

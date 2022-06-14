@@ -1,12 +1,15 @@
 import logging
 
+from collections import namedtuple
+
 import numpy as np
 import pandas as pd
 import sympy as sp
-from collections import namedtuple
+
 from sklearn.utils import resample
 
 import dowhy.interpreters as interpreters
+
 from dowhy.utils.api import parse_state
 
 

@@ -1,6 +1,7 @@
-from dowhy.utils.dgp import DataGeneratingProcess
 import numpy as np
 import pandas as pd
+
+from dowhy.utils.dgp import DataGeneratingProcess
 
 
 class CubicDataGeneratingProcess(DataGeneratingProcess):

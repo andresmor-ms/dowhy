@@ -1,7 +1,7 @@
 import logging
 
-import dowhy.causal_model
 import dowhy.causal_estimator
+import dowhy.causal_model
 import dowhy.causal_refuter
 
 

@@ -1,11 +1,10 @@
 import copy
-
-import numpy as np
 import logging
 
-from dowhy.causal_refuter import CausalRefutation
-from dowhy.causal_refuter import CausalRefuter
+import numpy as np
+
 from dowhy.causal_estimator import CausalEstimator
+from dowhy.causal_refuter import CausalRefutation, CausalRefuter
 
 
 class RandomCommonCause(CausalRefuter):

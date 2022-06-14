@@ -1,16 +1,17 @@
 import copy
 import logging
+import math
+
 import numpy as np
 import pandas as pd
 import scipy.stats
-
-import math
 import statsmodels.api as sm
-from sklearn.preprocessing import StandardScaler
+
 from sklearn.linear_model import LogisticRegression
-from dowhy.causal_refuter import CausalRefutation
-from dowhy.causal_refuter import CausalRefuter
+from sklearn.preprocessing import StandardScaler
+
 from dowhy.causal_estimator import CausalEstimator
+from dowhy.causal_refuter import CausalRefutation, CausalRefuter
 
 
 class AddUnobservedCommonCause(CausalRefuter):

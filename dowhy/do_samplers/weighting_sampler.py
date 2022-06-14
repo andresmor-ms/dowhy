@@ -1,9 +1,10 @@
+import numpy as np
+
 from dowhy.do_sampler import DoSampler
 from dowhy.utils.propensity_score import (
     propensity_of_treatment_score,
     state_propensity_score,
 )
-import numpy as np
 
 
 class WeightingSampler(DoSampler):

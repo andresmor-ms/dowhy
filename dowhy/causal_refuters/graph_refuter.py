@@ -1,7 +1,9 @@
 import logging
-from dowhy.causal_refuter import CausalRefuter, CausalRefutation
-from dowhy.utils.cit import partial_corr, conditional_MI
+
 import numpy as np
+
+from dowhy.causal_refuter import CausalRefutation, CausalRefuter
+from dowhy.utils.cit import conditional_MI, partial_corr
 
 
 class GraphRefuter(CausalRefuter):

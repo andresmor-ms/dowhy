@@ -1,6 +1,7 @@
+import pandas as pd
+
 from sklearn import linear_model
 from sklearn.neighbors import NearestNeighbors
-import pandas as pd
 
 from dowhy.causal_estimator import CausalEstimate
 from dowhy.causal_estimators.propensity_score_estimator import PropensityScoreEstimator
